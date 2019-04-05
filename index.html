@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+
+</head>
+<body>
+    <script>       
+        
+        var number = parseInt(prompt ("сколько нужно чисел"));
+        var max = 0; 
+        var min = 0;
+        var sum = 0;
+        var positionOfMax = 0;
+        var positionOfMin = 0;
+        var arr =  new Array(parseInt(number));
+        
+        
+        for( var i = 0; i < parseInt(number); i++){
+            
+           arr[i] = prompt ("введите следующие число");
+            
+        }
+        
+        
+   
+        
+        /*
+        //сумма всех отрицательных чисел между минимальм и максимальным
+         for ( var i = 0; i < number; i++ ){
+            
+            if (max < arr[i]){
+                max = arr[i];
+                positionOfMax = i ; 
+            }
+         }
+        
+         for ( var i = 0; i < number; i++ ){
+            
+            if ( min > arr[i] ){
+                min = arr[i];
+                positionOfMin = i;  
+                }
+            
+        }
+             
+             
+             
+       for ( var i = positionOfMin; i <= positionOfMax; i++  ){
+            
+           if (  parseInt(arr[i]) < 0){
+               
+            sum = parseInt(sum) + parseInt(arr[i]); 
+            
+           }
+        }
+        
+        alert(parseInt(sum));
+        
+        */
+        
+        /*
+        //сумма чисел между макс и мин
+         for ( var i = 0; i <= number; i++ ){
+            
+            if (max < arr[i]){
+                max = arr[i];
+                positionOfMax = i ; 
+            }
+            
+            
+            
+        }
+        
+     
+        for ( var i = 0; i < number; i++ ){
+            
+            if ( min > arr[i] ){
+                min = arr[i];
+                positionOfMin = i;  
+                }
+            
+        }
+        
+        
+         for ( var i = positionOfMin; i <= positionOfMax; i++  ){
+            
+            sum = parseInt(sum) + parseInt(arr[i]); 
+            
+            
+        }
+        
+        alert(parseInt(sum));
+        
+        */
+        /*
+        //выводим все ячейки между мин и макс
+        for ( var i = 0; i <= number; i++ ){
+            
+            if (max < arr[i]){
+                max = arr[i];
+                positionOfMax = i ; 
+            }
+            
+            
+            
+        }
+        
+        for ( var i = 0; i < number; i++ ){
+            
+            if ( min > arr[i] ){
+                min = arr[i];
+                positionOfMin = i;  
+                }
+            
+        }
+        
+        for ( var i = positionOfMin; i <= positionOfMax; i++  ){
+            
+            alert(arr[i]);
+            
+        }
+        */
+        
+        /* 
+
+        for ( var i = 0; i <= number; i++ ){
+            
+            if (max < arr[i]){
+                max = arr[i]; 
+                positionOfMax = i ; 
+            }
+            
+            
+            
+        }
+        
+       //выводим все ячейки массива до позиции макс числа
+        for ( var i = 0; i <= positionOfMax; i++ ){
+            
+            alert( arr[i] );
+            
+        }
+        
+         // вывод позиции максимального числа и самого числа
+        alert(max + " , " + positionOfMax);
+      
+        
+       
+       min = arr[0]; 
+       for ( var i = 0; i <= number; i++ ){
+            
+            if (min > arr[i]){
+                min = arr[i]; 
+            }
+            
+        }
+        alert("Min: "+min);
+
+        
+        
+        alert ( "max " + " - " + " min " + " = " + (max - min )); 
+        
+        
+        */
+        
+        
+       
+        
+      </script>
+</body>
+</html>
