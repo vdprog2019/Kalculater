@@ -6,66 +6,124 @@
             margin-left: 7%;
         }
         
+        .border{
+            width: 350px;
+            height: 400px;
+            background-color: gainsboro;
+            opacity: .5;
+        }
+        
+        .result{
+            margin-left: 150px;
+            margin-top: -300px;
+        }
+        
+        .tittle{
+          font-size: 15;
+            font-stretch: extra-expanded;
+            font-weight: bold;
+            color: black;
+            z-index: 1;
+        }
+        
+        .line{
+            float: right;
+            
+        }
+        
+        .summerynumber{
+            margin-top: 8%;
+            width: 100%;
+            height: 15%;
+            font-size: 25px;
+            text-align: right;
+            padding-right: 3%;
+            
+        }
+        .myBtn{
+            width: 23%;
+            height: 11%;
+        }
+         .myBtn_white{
+            background-color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .row{
+            margin-left: 2%;
+            margin-top: 2%;
+            
+        }
       </style>
     
  </head>
   <body>
     
-           
-     <div> <input class="text1" type="text" value="12" id="firstnumber"> </div>
-     <div> <select size="1" onchange="plus()" id="plusplus" >
-                
-            <option value="plus">+</option>
-            <option value="minus">-</option>
-            <option value="division">/</option>
-            <option value="multiplue">*</option>
-                    
-         </select> 
-     </div>     
-     <div> <input type="text" value="2" id="secondnumber"> </div>
-     <div> <input class="button" type="button" value="=" onclick="Summery()"> </div>
-     <div> <input type="text" value="3" id="summerynumber"> </div>
-      
-      
-      
-      <script>
-          
-          var choosed = "plus";
-      
-      function Summery()
-        {
-            var x = document.getElementById("firstnumber");
-            var y = document.getElementById("secondnumber");
-            var sum = document.getElementById("summerynumber");
-                        
-            if ( choosed == "plus" ){
-                sum.value = parseInt(x.value) + parseInt(y.value); 
-            }else if( choosed == "minus" ){
-                sum.value = parseInt(x.value) - parseInt(y.value);     
-            }else if( choosed == "division"){
-                if(y.value == 0){
-                    sum.value = 0;
-                }else{
-                    sum.value = parseInt(x.value) / parseInt(y.value); 
-                }
-            }else if ( choosed == "multiplue" ){
-                sum.value = parseInt(x.value) * parseInt(y.value); 
-            }
-        }
-          
-        function plus()
-          {
-              var pl = document.getElementById("plusplus");
-                
-              choosed = pl.value;  
-              
-              alert(choosed);
-             
-          }
-          
-          
          
       
+<div class="border">
+        <div class="tittle">
+            <span>Калькулятор</span>
+            <span class="line">_</span>
+           
+        </div>
+  
+       <div> <input class="summerynumber" type="text" value="0" id="summeryNumber"> </div>
+        
+            <div>
+                <div class="row">
+                    <input class="myBtn" type="button" value="%" onclick="click()">
+                    <input class="myBtn" type="button" value="√" onclick="click()">
+                    <input class="myBtn" type="button" value="%" onclick="click()">
+                    <input class="myBtn" type="button" value="%" onclick="click()">
+                </div>
+                
+                <div class="row">
+                    <input class="myBtn" type="button" value="CE" onclick="click()">
+                    <input class="myBtn" type="button" value="C" onclick="click()">
+                    <input class="myBtn" type="button" value="<=" onclick="click()">
+                    <input class="myBtn" type="button" value="÷" onclick="click()">
+                </div>
+    
+                <div class="row">
+                    <input class="myBtn myBtn_white" type="button" value="7" onclick="click_7()" id="btn_value_7">
+                    <input class="myBtn myBtn_white" type="button" value="8" onclick="click_8()"  id="btn_value_8">
+                    <input class="myBtn myBtn_white" type="button" value="9" onclick="click_9()"  id="btn_value_9">
+                    <input class="myBtn" type="button" value="X">
+                </div>
+                
+            </div>
+        
+        
+</div>  
+      
+      
+
+      <script>
+                  
+        function click_7()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_7");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_8()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_8");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_9()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_9");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
       </script>
       
   </body>
