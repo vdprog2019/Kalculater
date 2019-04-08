@@ -1,5 +1,11 @@
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
    
         .button{
@@ -11,6 +17,7 @@
             height: 400px;
             background-color: gainsboro;
             opacity: .5;
+            
         }
         
         .result{
@@ -33,7 +40,7 @@
         
         .summerynumber{
             margin-top: 8%;
-            width: 100%;
+            width: 95%;
             height: 15%;
             font-size: 25px;
             text-align: right;
@@ -73,24 +80,45 @@
         
             <div>
                 <div class="row">
-                    <input class="myBtn" type="button" value="%" onclick="click()">
-                    <input class="myBtn" type="button" value="√" onclick="click()">
-                    <input class="myBtn" type="button" value="%" onclick="click()">
-                    <input class="myBtn" type="button" value="%" onclick="click()">
+                    <input class="myBtn" type="button" value="%" onclick="click_percent()" id="btn_value_p">
+                    <input class="myBtn" type="button" value="√" onclick="click_source()" id="btn_value_s">
+                    <input class="myBtn" type="button" value="x^2" onclick="click_two()" id="btn_value_t">
+                    <input class="myBtn" type="button" value="1/x" onclick="click_1x()" id="btn_value_1">
                 </div>
                 
                 <div class="row">
-                    <input class="myBtn" type="button" value="CE" onclick="click()">
-                    <input class="myBtn" type="button" value="C" onclick="click()">
-                    <input class="myBtn" type="button" value="<=" onclick="click()">
-                    <input class="myBtn" type="button" value="÷" onclick="click()">
+                    <input class="myBtn" type="button" value="CE" onclick="click_ce()" id="btn_value_ce">
+                    <input class="myBtn" type="button" value="C" onclick="click_c()" id="btn_value_c">
+                    <input class="myBtn" type="button" value="<=" onclick="click_back()" id="btn_value_back">
+                    <input class="myBtn" type="button" value="÷" onclick="click_division()" id="btn_value_division">
                 </div>
     
                 <div class="row">
                     <input class="myBtn myBtn_white" type="button" value="7" onclick="click_7()" id="btn_value_7">
                     <input class="myBtn myBtn_white" type="button" value="8" onclick="click_8()"  id="btn_value_8">
                     <input class="myBtn myBtn_white" type="button" value="9" onclick="click_9()"  id="btn_value_9">
-                    <input class="myBtn" type="button" value="X">
+                    <input class="myBtn" type="button" value="x" onclick="click_X()" id="btn_value_X">
+                </div>
+
+                <div class="row">
+                    <input class="myBtn myBtn_white" type="button" value="4" onclick="click_4()" id="btn_value_4">
+                    <input class="myBtn myBtn_white" type="button" value="5" onclick="click_5()"  id="btn_value_5">
+                    <input class="myBtn myBtn_white" type="button" value="6" onclick="click_6()"  id="btn_value_6">
+                    <input class="myBtn" type="button" value="-" onclick="click_minus()" id="btn_value_-">
+                </div>
+
+                <div class="row">
+                    <input class="myBtn myBtn_white" type="button" value="1" onclick="click_4()" id="btn_value_1">
+                    <input class="myBtn myBtn_white" type="button" value="2" onclick="click_5()"  id="btn_value_2">
+                    <input class="myBtn myBtn_white" type="button" value="3" onclick="click_6()"  id="btn_value_3">
+                    <input class="myBtn" type="button" value="+" onclick="plus()" id="btn_value_+">
+                </div>
+
+                <div class="row">
+                    <input class="myBtn myBtn_white" type="button" value="e" onclick="click_()" id="btn_value_">
+                    <input class="myBtn myBtn_white" type="button" value="0" onclick="click_0()"  id="btn_value_0">
+                    <input class="myBtn myBtn_white" type="button" value="," onclick="click_z()"  id="btn_value_z">
+                    <input class="myBtn" type="button" value="=" onclick="click_res()" id="btn_value_=">
                 </div>
                 
             </div>
@@ -101,6 +129,70 @@
       
 
       <script>
+
+
+
+            function click_percent()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_p");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_source()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_s");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_two()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_t");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+          function click_1x()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_1");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+          function click_ce()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_ce");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_c()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_c");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_back()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_back");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+          function click_division()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_division");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+
                   
         function click_7()
           {
@@ -124,6 +216,106 @@
              
           }
 
+          function click_X()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_X");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+
+          function click_4()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_4");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_5()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_5");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_6()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_6");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+          function click_minus()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_-");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+
+          function click_1()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_1");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_2()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_2");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_3()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_3");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+          function click_plus()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_+");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+
+          function click_()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_0()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_0");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+           function click_z()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_z");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
+
+          function click_res()
+          {
+              var summer = document.getElementById("summeryNumber");
+              var nowClickValue = document.getElementById("btn_value_=");
+             summer.value = summer.value + nowClickValue.value;
+             
+          }
       </script>
       
   </body>
