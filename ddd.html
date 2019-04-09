@@ -13,8 +13,8 @@
         }
         
         .border{
-            width: 350px;
-            height: 400px;
+            width: 30%;
+            height: 33%;
             background-color: gainsboro;
             opacity: .5;
             
@@ -90,14 +90,14 @@
                     <input class="myBtn" type="button" value="CE" onclick="click_ce()" id="btn_value_ce">
                     <input class="myBtn" type="button" value="C" onclick="click_c()" id="btn_value_c">
                     <input class="myBtn" type="button" value="<=" onclick="click_back()" id="btn_value_back">
-                    <input class="myBtn" type="button" value="÷" onclick="click_division()" id="btn_value_division">
+                    <input class="myBtn" type="button" value="/" onclick="click_division()" id="btn_value_division">
                 </div>
     
                 <div class="row">
                     <input class="myBtn myBtn_white" type="button" value="7" onclick="click_7()" id="btn_value_7">
                     <input class="myBtn myBtn_white" type="button" value="8" onclick="click_8()"  id="btn_value_8">
                     <input class="myBtn myBtn_white" type="button" value="9" onclick="click_9()"  id="btn_value_9">
-                    <input class="myBtn" type="button" value="x" onclick="click_X()" id="btn_value_X">
+                    <input class="myBtn" type="button" value="*" onclick="click_X()" id="btn_value_X">
                 </div>
 
                 <div class="row">
@@ -108,10 +108,10 @@
                 </div>
 
                 <div class="row">
-                    <input class="myBtn myBtn_white" type="button" value="1" onclick="click_4()" id="btn_value_1">
-                    <input class="myBtn myBtn_white" type="button" value="2" onclick="click_5()"  id="btn_value_2">
-                    <input class="myBtn myBtn_white" type="button" value="3" onclick="click_6()"  id="btn_value_3">
-                    <input class="myBtn" type="button" value="+" onclick="plus()" id="btn_value_+">
+                    <input class="myBtn myBtn_white" type="button" value="1" onclick="click_1()" id="btn_value_1">
+                    <input class="myBtn myBtn_white" type="button" value="2" onclick="click_2()"  id="btn_value_2">
+                    <input class="myBtn myBtn_white" type="button" value="3" onclick="click_3()"  id="btn_value_3">
+                    <input class="myBtn" type="button" value="+" onclick="click_plus()" id="btn_value_+">
                 </div>
 
                 <div class="row">
@@ -311,9 +311,9 @@
 
           function click_res()
           {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_=");
-             summer.value = summer.value + nowClickValue.value;
+                
+              var result = (eval(document.getElementById("summeryNumber").value));
+              document.getElementById("summeryNumber").value = result;
              
           }
       </script>
