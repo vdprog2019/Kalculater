@@ -76,14 +76,14 @@
            
         </div>
   
-       <div> <input class="summerynumber" type="text" value="0" id="summeryNumber"> </div>
+       <div> <input class="summerynumber" type="text" value="" id="summeryNumber"> </div>
         
             <div>
                 <div class="row">
                     <input class="myBtn" type="button" value="%" onclick="click_percent()" id="btn_value_p">
                     <input class="myBtn" type="button" value="√" onclick="click_source()" id="btn_value_s">
                     <input class="myBtn" type="button" value="x^2" onclick="click_two()" id="btn_value_t">
-                    <input class="myBtn" type="button" value="1/x" onclick="click_1x()" id="btn_value_1">
+                    <input class="myBtn" type="button" value="1/x" onclick="click_1x()" id="btn_value_1x">
                 </div>
                 
                 <div class="row">
@@ -129,7 +129,35 @@
       
 
       <script>
+          
+          
+          
+          
+          function setCaretPosition(ctrl, pos) {
+              // Modern browsers
+              if (ctrl.setSelectionRange) {
+                ctrl.focus();
+                ctrl.setSelectionRange(pos, pos);
 
+              // IE8 and below
+              } else if (ctrl.createTextRange) {
+                var range = ctrl.createTextRange();
+                range.collapse(true);
+                range.moveEnd('character', pos);
+                range.moveStart('character', pos);
+                range.select();
+              }
+            }
+
+            // Set the cursor position of the "#test-input" element to the end when the page loads
+            var input = document.getElementById('summeryNumber');
+            setCaretPosition(input, input.value.length);
+
+          
+          
+          
+          
+          
 
 
             function click_percent()
@@ -157,23 +185,30 @@
           function click_1x()
           {
               var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_1");
+              var nowClickValue = document.getElementById("btn_value_1x");
              summer.value = summer.value + nowClickValue.value;
              
           }
 
           function click_ce()
           {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_ce");
-             summer.value = summer.value + nowClickValue.value;
+              document.getElementById("summeryNumber").value = 0;
              
           }
            function click_c()
           {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_c");
-             summer.value = summer.value + nowClickValue.value;
+              var summer = document.getElementById("summeryNumber").value;
+              if(summer.length > 1){
+                
+                 var tmp = new String(summer);                 
+                 tmp = tmp.slice(0, tmp.length -1);
+                 
+                 document.getElementById("summeryNumber").value = tmp;
+              }
+              else{
+                  document.getElementById("summeryNumber").value;
+              }
+                  
              
           }
            function click_back()
@@ -199,21 +234,21 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_7");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length); 
           }
            function click_8()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_8");
              summer.value = summer.value + nowClickValue.value;
-             
+               setCaretPosition(input, input.value.length);
           }
            function click_9()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_9");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length); 
           }
 
           function click_X()
@@ -221,7 +256,7 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_X");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
 
 
@@ -230,6 +265,7 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_4");
              summer.value = summer.value + nowClickValue.value;
+               setCaretPosition(input, input.value.length);
              
           }
            function click_5()
@@ -237,14 +273,14 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_5");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
            function click_6()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_6");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
 
           function click_minus()
@@ -252,7 +288,7 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_-");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
 
 
@@ -261,21 +297,21 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_1");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
            function click_2()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_2");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
            function click_3()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_3");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
 
           function click_plus()
@@ -283,7 +319,7 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_+");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
 
 
@@ -292,21 +328,21 @@
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
            function click_0()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_0");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
            function click_z()
           {
               var summer = document.getElementById("summeryNumber");
               var nowClickValue = document.getElementById("btn_value_z");
              summer.value = summer.value + nowClickValue.value;
-             
+              setCaretPosition(input, input.value.length);
           }
 
           function click_res()
@@ -316,6 +352,9 @@
               document.getElementById("summeryNumber").value = result;
              
           }
+          
+          
+         
       </script>
       
   </body>
