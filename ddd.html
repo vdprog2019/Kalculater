@@ -162,23 +162,28 @@
 
             function click_percent()
           {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_p");
-             summer.value = summer.value + nowClickValue.value;
              
+              var summer = document.getElementById("summeryNumber").value;
+              var number = parseFloat(summer);
+              var p = number - (number * .35).value;
+              
+              
+
+
           }
            function click_source()
           {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_s");
-             summer.value = summer.value + nowClickValue.value;
+              //Math.sqrt(x)
+              var summer = document.getElementById("summeryNumber").value = Math.sqrt(parseInt(summeryNumber));
+              
+              //summer.value = summer.value + nowClickValue.value;
              
           }
            function click_two()
-          {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_t");
-             summer.value = summer.value + nowClickValue.value;
+          { 
+
+              var summer = document.getElementById("summeryNumber").value = Math.pow(parseInt(summeryNumber),2); 
+                  
              
           }
 
@@ -213,9 +218,17 @@
           }
            function click_back()
           {
-              var summer = document.getElementById("summeryNumber");
-              var nowClickValue = document.getElementById("btn_value_back");
-             summer.value = summer.value + nowClickValue.value;
+            var summer = document.getElementById("summeryNumber").value;
+              if(summer.length > 1){
+                
+                 var tmp = new String(summer);                 
+                 tmp = tmp.slice(0, tmp.length -1);
+                 
+                 document.getElementById("summeryNumber").value = tmp;
+              }
+              else{
+                  document.getElementById("summeryNumber").value;
+              }
              
           }
 
